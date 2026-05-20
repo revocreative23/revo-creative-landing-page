@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const fs=require\\('fs'\\); ['index.html','products.html','portfolio.html','about.html','contact.html'].forEach\\(f=>{const c=fs.readFileSync\\('frontend/'+f,'utf8'\\);const open=\\(c.match\\(/<section/g\\)||[]\\).length;const close=\\(c.match\\(/<\\\\/section>/g\\)||[]\\).length;console.log\\(f,'sections open:',open,'close:',close\\);}\\);\")"
+    ]
+  }
+}

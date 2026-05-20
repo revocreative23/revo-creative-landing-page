@@ -93,6 +93,72 @@ if (contactForm) {
   });
 }
 
+// Products carousel — auto-rotating
+const productsCarousel = document.querySelector(".products-carousel");
+if (productsCarousel) {
+  const track = productsCarousel.querySelector(".products-track");
+  const slides = productsCarousel.querySelectorAll(".product-slide");
+  const dots = productsCarousel.querySelectorAll(".carousel-dot");
+  const prevBtn = productsCarousel.querySelector(".carousel-arrow.prev");
+  const nextBtn = productsCarousel.querySelector(".carousel-arrow.next");
+  const total = slides.length;
+  const ROTATE_MS = 5000;
+  let current = 0;
+  let timer = null;
+
+  const goTo = (index) => {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+  };
+
+  const next = () => goTo(current + 1);
+  const prev = () => goTo(current - 1);
+
+  const start = () => {
+    stop();
+    timer = setInterval(next, ROTATE_MS);
+  };
+  const stop = () => {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  };
+
+  nextBtn && nextBtn.addEventListener("click", () => { next(); start(); });
+  prevBtn && prevBtn.addEventListener("click", () => { prev(); start(); });
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goTo(parseInt(dot.dataset.slide, 10));
+      start();
+    });
+  });
+
+  // Pause on hover (desktop)
+  productsCarousel.addEventListener("mouseenter", stop);
+  productsCarousel.addEventListener("mouseleave", start);
+
+  // Pause when tab not visible — avoids drift
+  document.addEventListener("visibilitychange", () => {
+    document.hidden ? stop() : start();
+  });
+
+  // Touch swipe (mobile)
+  let touchStartX = 0;
+  track.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stop();
+  }, { passive: true });
+  track.addEventListener("touchend", (e) => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(diff) > 40) diff > 0 ? prev() : next();
+    start();
+  }, { passive: true });
+
+  start();
+}
+
 // Year in footer
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
