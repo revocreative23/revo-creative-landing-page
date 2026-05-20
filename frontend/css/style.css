@@ -1608,6 +1608,14 @@ h1, h2, h3, h4, h5 {
   transition: all var(--transition);
 }
 
+.social-ico img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+
 .social-ico:hover {
   background: var(--color-primary);
   transform: translateY(-3px);
