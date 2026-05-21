@@ -159,6 +159,25 @@ if (productsCarousel) {
   start();
 }
 
+// Back-to-top floating button
+const backToTopBtn = document.querySelector(".back-to-top");
+if (backToTopBtn) {
+  const SHOW_AFTER = 400;
+  const updateBackToTopState = () => {
+    if (window.scrollY > SHOW_AFTER) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  };
+  window.addEventListener("scroll", updateBackToTopState, { passive: true });
+  updateBackToTopState();
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
 // Year in footer
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();

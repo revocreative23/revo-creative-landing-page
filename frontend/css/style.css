@@ -11,6 +11,7 @@
 /* ----- Layout chrome (shared across all pages) ----- */
 @import "modules/navbar.css";        /* fixed top navbar + mobile drawer */
 @import "modules/footer.css";        /* footer grid + socials */
+@import "modules/back-to-top.css";   /* floating "back to top" button (bottom-right) */
 
 /* ----- Hero patterns ----- */
 @import "modules/hero.css";          /* homepage hero (.hero) */
