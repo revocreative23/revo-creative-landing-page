@@ -12,6 +12,7 @@
 @import "modules/navbar.css";        /* fixed top navbar + mobile drawer */
 @import "modules/footer.css";        /* footer grid + socials */
 @import "modules/back-to-top.css";   /* floating "back to top" button (bottom-right) */
+@import "modules/lang-switch.css";   /* EN/ID language toggle in navbar */
 
 /* ----- Hero patterns ----- */
 @import "modules/hero.css";          /* homepage hero (.hero) */

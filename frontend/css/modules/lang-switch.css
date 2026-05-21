@@ -1,0 +1,65 @@
+/* =========================
+   Language switcher (navbar)
+   ========================= */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.lang-switch button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.lang-switch button:hover {
+  color: var(--color-white);
+}
+
+.lang-switch button.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Navbar scrolled state (white nav background) */
+.navbar.scrolled .lang-switch {
+  border-color: var(--color-border);
+  background: var(--color-light);
+}
+
+.navbar.scrolled .lang-switch button {
+  color: var(--color-muted);
+}
+
+.navbar.scrolled .lang-switch button:hover {
+  color: var(--color-navy);
+}
+
+.navbar.scrolled .lang-switch button.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+@media (max-width: 720px) {
+  .lang-switch {
+    padding: 2px;
+  }
+  .lang-switch button {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+}

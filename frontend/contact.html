@@ -96,17 +96,21 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="#contact-form" class="btn btn-primary">Get a Quote</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="id">ID</button>
+        </div>
+        <a href="#contact-form" class="btn btn-primary" data-i18n="nav.getQuote">Get a Quote</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggleMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -116,9 +120,9 @@
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumbs"><a href="index.html">Home</a> / Contact</div>
-      <h1>Mari Berkolaborasi</h1>
-      <p>Tim kami siap mendengar kebutuhan Anda. Pilih cara paling nyaman untuk menghubungi kami — atau kirim brief proyek lewat formulir di bawah.</p>
+      <div class="breadcrumbs"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.contact">Contact</span></div>
+      <h1 data-i18n="contactPage.title">Mari Berkolaborasi</h1>
+      <p data-i18n="contactPage.subtitle">Tim kami siap mendengar kebutuhan Anda. Pilih cara paling nyaman untuk menghubungi kami — atau kirim brief proyek lewat formulir di bawah.</p>
     </div>
   </section>
 
@@ -131,18 +135,18 @@
           <img src="assets/contact-person.jpg" alt="Tim Revo Creative siap membantu pertanyaan Anda" loading="lazy" style="border-radius:var(--radius-lg);" />
         </div>
         <div class="reveal">
-          <span class="section-tag">Talk to a Real Human</span>
-          <h2 class="section-title">Selalu Ada Tim yang <span>Siap Mendengarkan</span></h2>
-          <p style="color:var(--color-muted);font-size:16.5px;margin-bottom:16px;">
+          <span class="section-tag" data-i18n="contactPage.introTag">Talk to a Real Human</span>
+          <h2 class="section-title" data-i18n="contactPage.introTitle" data-i18n-html>Selalu Ada Tim yang <span>Siap Mendengarkan</span></h2>
+          <p style="color:var(--color-muted);font-size:16.5px;margin-bottom:16px;" data-i18n="contactPage.introDesc">
             Kami percaya proyek digital terbaik dimulai dari percakapan yang baik.
             Jangan ragu untuk berbagi ide, kebutuhan, ataupun pertanyaan sekecil
             apapun — tim kami siap memandu Anda dari nol hingga peluncuran.
           </p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--color-text);font-size:15px;">
-            <li>&#10003; Respons di bawah 1×24 jam (hari kerja)</li>
-            <li>&#10003; Konsultasi awal gratis, tanpa komitmen</li>
-            <li>&#10003; NDA tersedia untuk proyek konfidensial</li>
-            <li>&#10003; Tim multi-disiplin: engineering, bisnis, kreatif</li>
+            <li>&#10003; <span data-i18n="contactPage.bullet1">Respons di bawah 1×24 jam (hari kerja)</span></li>
+            <li>&#10003; <span data-i18n="contactPage.bullet2">Konsultasi awal gratis, tanpa komitmen</span></li>
+            <li>&#10003; <span data-i18n="contactPage.bullet3">NDA tersedia untuk proyek konfidensial</span></li>
+            <li>&#10003; <span data-i18n="contactPage.bullet4">Tim multi-disiplin: engineering, bisnis, kreatif</span></li>
           </ul>
         </div>
       </div>
@@ -155,23 +159,23 @@
       <div class="services-grid">
         <a href="https://wa.me/+628567990037" class="service-card reveal" style="text-decoration:none;">
           <div class="service-icon">&#9990;</div>
-          <h3>WhatsApp</h3>
-          <p>Respons cepat untuk diskusi awal. Chavvah, +62 856-7990-037.</p>
+          <h3 data-i18n="contactPage.quickWAH">WhatsApp</h3>
+          <p data-i18n="contactPage.quickWADesc">Respons cepat untuk diskusi awal. Chavvah, +62 856-7990-037.</p>
         </a>
         <a href="mailto:rajawalicakradigdaya@gmail.com" class="service-card reveal" style="text-decoration:none;">
           <div class="service-icon">&#9993;</div>
-          <h3>Email</h3>
-          <p>Untuk brief lengkap, RFP, atau proposal: rajawalicakradigdaya@gmail.com</p>
+          <h3 data-i18n="contactPage.quickEmailH">Email</h3>
+          <p data-i18n="contactPage.quickEmailDesc">Untuk brief lengkap, RFP, atau proposal: rajawalicakradigdaya@gmail.com</p>
         </a>
         <a href="https://maps.google.com/maps?q=Jl.+Raya+Pd.+Gede+No.14A+Pinang+Ranti+Jakarta+Timur+13560" target="_blank" rel="noopener" class="service-card reveal" style="text-decoration:none;">
           <div class="service-icon">&#128205;</div>
-          <h3>Office Address</h3>
-          <p>Jl. Raya Pd. Gede No.14A, Pinang Ranti, Kec. Makasar, Jakarta Timur 13560.</p>
+          <h3 data-i18n="contactPage.quickOfficeH">Office Address</h3>
+          <p data-i18n="contactPage.quickOfficeDesc">Jl. Raya Pd. Gede No.14A, Pinang Ranti, Kec. Makasar, Jakarta Timur 13560.</p>
         </a>
         <a href="https://revocreative.co.id" class="service-card reveal" style="text-decoration:none;">
           <div class="service-icon">&#127760;</div>
-          <h3>Website</h3>
-          <p>Lihat seluruh layanan dan update terbaru di revocreative.co.id</p>
+          <h3 data-i18n="contactPage.quickWebH">Website</h3>
+          <p data-i18n="contactPage.quickWebDesc">Lihat seluruh layanan dan update terbaru di revocreative.co.id</p>
         </a>
       </div>
     </div>
@@ -182,9 +186,9 @@
     <div class="container">
       <div class="contact-grid">
         <div class="reveal">
-          <span class="section-tag">Send Us a Message</span>
-          <h2 class="section-title">Ceritakan <span>Proyek</span> Anda</h2>
-          <p style="color:var(--color-muted);font-size:16px;margin-bottom:30px;">
+          <span class="section-tag" data-i18n="contactPage.formTag">Send Us a Message</span>
+          <h2 class="section-title" data-i18n="contactPage.formTitle" data-i18n-html>Ceritakan <span>Proyek</span> Anda</h2>
+          <p style="color:var(--color-muted);font-size:16px;margin-bottom:30px;" data-i18n="contactPage.formIntro">
             Semakin lengkap detail yang Anda berikan, semakin cepat kami dapat
             menyusun proposal yang tepat. Kami biasanya merespons dalam 1×24 jam.
           </p>
@@ -193,28 +197,28 @@
             <div class="contact-card">
               <div class="ico">&#9990;</div>
               <div>
-                <div class="label">Phone / WhatsApp</div>
-                <div class="value">Chavvah · +62 856-7990-037</div>
+                <div class="label" data-i18n="contactHome.phoneLabel">Phone / WhatsApp</div>
+                <div class="value">Chavvah &middot; +62 856-7990-037</div>
               </div>
             </div>
             <div class="contact-card">
               <div class="ico">&#9993;</div>
               <div>
-                <div class="label">Email</div>
+                <div class="label" data-i18n="contactHome.emailLabel">Email</div>
                 <div class="value">rajawalicakradigdaya@gmail.com</div>
               </div>
             </div>
             <a class="contact-card" href="https://maps.google.com/maps?q=Jl.+Raya+Pd.+Gede+No.14A+Pinang+Ranti+Jakarta+Timur+13560" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
               <div class="ico">&#128205;</div>
               <div>
-                <div class="label">Office Address</div>
-                <div class="value" style="font-weight:600;line-height:1.4;">Jl. Raya Pd. Gede No.14A, Pinang Ranti,<br />Kec. Makasar, Jakarta Timur 13560</div>
+                <div class="label" data-i18n="contactHome.addressLabel">Office Address</div>
+                <div class="value" style="font-weight:600;line-height:1.4;" data-i18n="contactHome.addressValue" data-i18n-html>Jl. Raya Pd. Gede No.14A, Pinang Ranti,<br />Kec. Makasar, Jakarta Timur 13560</div>
               </div>
             </a>
             <div class="contact-card">
               <div class="ico">&#127760;</div>
               <div>
-                <div class="label">Website</div>
+                <div class="label" data-i18n="contactHome.websiteLabel">Website</div>
                 <div class="value">revocreative.co.id</div>
               </div>
             </div>
@@ -222,54 +226,54 @@
         </div>
 
         <form class="contact-form reveal" novalidate>
-          <div class="form-success">Terima kasih! Pesan Anda berhasil terkirim. Tim kami akan menghubungi Anda segera.</div>
+          <div class="form-success" data-i18n="form.success">Terima kasih! Pesan Anda berhasil terkirim. Tim kami akan menghubungi Anda segera.</div>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Nama Lengkap</label>
-              <input type="text" id="name" name="name" placeholder="Nama Anda" required />
+              <label for="name" data-i18n="form.nameLabel">Nama Lengkap</label>
+              <input type="text" id="name" name="name" placeholder="Nama Anda" required data-i18n-attr="placeholder:form.namePh" />
             </div>
             <div class="form-group">
-              <label for="company">Perusahaan</label>
-              <input type="text" id="company" name="company" placeholder="Nama perusahaan" />
+              <label for="company" data-i18n="form.companyLabel">Perusahaan</label>
+              <input type="text" id="company" name="company" placeholder="Nama perusahaan" data-i18n-attr="placeholder:form.companyPh" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@perusahaan.com" required />
+              <label for="email" data-i18n="form.emailLabel">Email</label>
+              <input type="email" id="email" name="email" placeholder="email@perusahaan.com" required data-i18n-attr="placeholder:form.emailPh" />
             </div>
             <div class="form-group">
-              <label for="phone">Nomor Telepon</label>
-              <input type="tel" id="phone" name="phone" placeholder="+62 ..." />
+              <label for="phone" data-i18n="form.phoneLabel">Nomor Telepon</label>
+              <input type="tel" id="phone" name="phone" placeholder="+62 ..." data-i18n-attr="placeholder:form.phonePh" />
             </div>
           </div>
           <div class="form-group">
-            <label for="service">Layanan yang Diminati</label>
+            <label for="service" data-i18n="form.serviceLabel">Layanan yang Diminati</label>
             <select id="service" name="service">
-              <option value="">Pilih layanan</option>
-              <option>Website Development</option>
-              <option>Web &amp; Mobile Apps</option>
-              <option>Digital Branding</option>
-              <option>Digital Marketing</option>
-              <option>Konsultasi Lainnya</option>
+              <option value="" data-i18n="form.servicePlaceholder">Pilih layanan</option>
+              <option data-i18n="form.svcWebsite">Website Development</option>
+              <option data-i18n="form.svcApps">Web &amp; Mobile Apps</option>
+              <option data-i18n="form.svcBranding">Digital Branding</option>
+              <option data-i18n="form.svcMarketing">Digital Marketing</option>
+              <option data-i18n="form.svcOther">Konsultasi Lainnya</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="budget">Estimasi Budget</label>
+            <label for="budget" data-i18n="form.budgetLabel">Estimasi Budget</label>
             <select id="budget" name="budget">
-              <option value="">Pilih estimasi</option>
-              <option>&lt; Rp 10 Juta</option>
-              <option>Rp 10 – 30 Juta</option>
-              <option>Rp 30 – 100 Juta</option>
-              <option>&gt; Rp 100 Juta</option>
-              <option>Belum ditentukan</option>
+              <option value="" data-i18n="form.budgetPlaceholder">Pilih estimasi</option>
+              <option data-i18n="form.budget1">&lt; Rp 10 Juta</option>
+              <option data-i18n="form.budget2">Rp 10 – 30 Juta</option>
+              <option data-i18n="form.budget3">Rp 30 – 100 Juta</option>
+              <option data-i18n="form.budget4">&gt; Rp 100 Juta</option>
+              <option data-i18n="form.budget5">Belum ditentukan</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Ceritakan Proyek Anda</label>
-            <textarea id="message" name="message" placeholder="Tujuan proyek, fitur utama, timeline yang diharapkan..." required></textarea>
+            <label for="message" data-i18n="form.projectLabel">Ceritakan Proyek Anda</label>
+            <textarea id="message" name="message" placeholder="Tujuan proyek, fitur utama, timeline yang diharapkan..." required data-i18n-attr="placeholder:form.projectPh"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <button type="submit" class="btn btn-primary" data-i18n="form.submit">Kirim Pesan</button>
         </form>
       </div>
     </div>
@@ -279,9 +283,9 @@
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="text-center reveal">
-        <span class="section-tag">Visit Us</span>
-        <h2 class="section-title">Kunjungi <span>Kantor Kami</span></h2>
-        <p class="section-subtitle center-block">
+        <span class="section-tag" data-i18n="contactPage.mapTag">Visit Us</span>
+        <h2 class="section-title" data-i18n="contactPage.mapTitle" data-i18n-html>Kunjungi <span>Kantor Kami</span></h2>
+        <p class="section-subtitle center-block" data-i18n="contactPage.mapAddress" data-i18n-html>
           Jl. Raya Pd. Gede No.14A, Pinang Ranti, Kec. Makasar,<br />
           Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13560
         </p>
@@ -305,38 +309,38 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/revo-2024-horizontal-white-zoomed-no-background.webp" alt="Revo Creative" />
-          <p>PT Rajawali Cakra Digdaya — agensi digital yang membantu Anda men-digitalisasi bisnis dengan kualitas korporat dan harga yang terjangkau.</p>
+          <p data-i18n="footer.brandDesc">PT Rajawali Cakra Digdaya — agensi digital yang membantu Anda men-digitalisasi bisnis dengan kualitas korporat dan harga yang terjangkau.</p>
         </div>
         <div>
-          <h5>Perusahaan</h5>
+          <h5 data-i18n="footer.companyHeading">Perusahaan</h5>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h5>Layanan</h5>
+          <h5 data-i18n="footer.servicesHeading">Layanan</h5>
           <ul>
-            <li><a href="index.html#services">Website</a></li>
-            <li><a href="index.html#services">Web &amp; Mobile Apps</a></li>
-            <li><a href="index.html#services">Digital Branding</a></li>
-            <li><a href="index.html#services">Digital Marketing</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcWebsite">Website</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcApps">Web &amp; Mobile Apps</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcBranding">Digital Branding</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcMarketing">Digital Marketing</a></li>
           </ul>
         </div>
         <div>
-          <h5>Kontak</h5>
+          <h5 data-i18n="footer.contactHeading">Kontak</h5>
           <ul>
             <li>+62 856-7990-037</li>
             <li>rajawalicakradigdaya@gmail.com</li>
             <li>revocreative.co.id</li>
-            <li style="margin-top:8px;line-height:1.5;">Jl. Raya Pd. Gede No.14A,<br/>Pinang Ranti, Makasar,<br/>Jakarta Timur 13560</li>
+            <li style="margin-top:8px;line-height:1.5;" data-i18n="footer.address" data-i18n-html>Jl. Raya Pd. Gede No.14A,<br/>Pinang Ranti, Makasar,<br/>Jakarta Timur 13560</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>© <span id="year">2025</span> Revo Creative. All Rights Reserved.</div>
+        <div>© <span id="year">2025</span> Revo Creative. <span data-i18n="footer.rights">All Rights Reserved.</span></div>
         <div class="socials">
           <a class="social-ico" href="https://www.instagram.com/revocreative_id/" target="_blank" rel="noopener" aria-label="Instagram Revo Creative"><img src="assets/icon/Instagram-logo.svg" alt="Instagram" /></a>
           <a class="social-ico" href="https://www.linkedin.com/company/101702844" target="_blank" rel="noopener" aria-label="LinkedIn Revo Creative"><img src="assets/icon/linkedin-logo.png" alt="LinkedIn" /></a>
@@ -346,7 +350,7 @@
     </div>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="Kembali ke atas">
+  <button class="back-to-top" type="button" aria-label="Kembali ke atas" data-i18n-attr="aria-label:backToTop.label">
     <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 14 12 8 18 14" /></svg>
   </button>
 

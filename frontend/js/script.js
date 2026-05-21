@@ -1,3 +1,94 @@
+// =========================================================================
+// i18n — Internationalization (EN default, ID for Indonesian browsers)
+// Static HTML is in Indonesian; engine swaps to English when needed.
+// Selection is sticky via localStorage; auto-detect runs on first visit only.
+// =========================================================================
+const I18N = (() => {
+  const STORAGE_KEY = "revo_lang";
+  const SUPPORTED = ["en", "id"];
+  const DEFAULT_LANG = "en";
+  let currentLang = null;
+  let dictionary = null;
+
+  const detectInitialLang = () => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved && SUPPORTED.includes(saved)) return saved;
+    const browser = (navigator.language || "").toLowerCase();
+    if (browser.startsWith("id")) return "id";
+    return DEFAULT_LANG;
+  };
+
+  const resolveKey = (obj, path) =>
+    path.split(".").reduce((acc, k) => (acc == null ? acc : acc[k]), obj);
+
+  const applyAll = (dict) => {
+    // Text content via data-i18n="key.path"
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const value = resolveKey(dict, el.getAttribute("data-i18n"));
+      if (typeof value === "string") {
+        if (el.hasAttribute("data-i18n-html")) el.innerHTML = value;
+        else el.textContent = value;
+      }
+    });
+    // Attribute translations via data-i18n-attr="attrName:key.path"
+    // e.g. data-i18n-attr="placeholder:contact.form.email"
+    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+      el.getAttribute("data-i18n-attr").split("|").forEach((entry) => {
+        const [attr, key] = entry.split(":");
+        if (!attr || !key) return;
+        const value = resolveKey(dict, key.trim());
+        if (typeof value === "string") el.setAttribute(attr.trim(), value);
+      });
+    });
+    // <html lang>
+    document.documentElement.lang = currentLang;
+  };
+
+  const updateSwitcherUI = () => {
+    document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.lang === currentLang);
+      btn.setAttribute("aria-pressed", btn.dataset.lang === currentLang ? "true" : "false");
+    });
+  };
+
+  const load = async (lang) => {
+    try {
+      const res = await fetch(`i18n/${lang}.json`, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`Failed to load ${lang}.json`);
+      return await res.json();
+    } catch (err) {
+      console.warn("[i18n] failed to load", lang, err);
+      return null;
+    }
+  };
+
+  const setLang = async (lang) => {
+    if (!SUPPORTED.includes(lang)) return;
+    currentLang = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
+    updateSwitcherUI();
+    // Static HTML is in Indonesian; only fetch+apply when switching to non-ID.
+    // For ID we still try to load so any data-i18n="key" without static fallback works.
+    dictionary = await load(lang);
+    if (dictionary) applyAll(dictionary);
+  };
+
+  const init = () => {
+    currentLang = detectInitialLang();
+    updateSwitcherUI();
+    // Wire up switcher
+    document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
+      btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+    // Apply translations (skip fetch if EN is default but static is ID — we still need EN dict)
+    setLang(currentLang);
+  };
+
+  return { init, setLang, get current() { return currentLang; } };
+})();
+
+I18N.init();
+
 // Navbar — scroll state (transparent dark → solid white once scrolled past hero)
 const navbarEl = document.querySelector(".navbar");
 if (navbarEl) {

@@ -80,17 +80,21 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="id">ID</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.getQuote">Get a Quote</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggleMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -100,9 +104,9 @@
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumbs"><a href="index.html">Home</a> / About Us</div>
-      <h1>Bertemu Revo Creative</h1>
-      <p>Bermula dari semangat 2023, kami membangun kemitraan bersama talenta-talenta muda di bidang IT, bisnis, dan administrasi untuk mendukung kualitas digitalisasi yang berdampak.</p>
+      <div class="breadcrumbs"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.about">About Us</span></div>
+      <h1 data-i18n="aboutPage.title">Bertemu Revo Creative</h1>
+      <p data-i18n="aboutPage.subtitle">Bermula dari semangat 2023, kami membangun kemitraan bersama talenta-talenta muda di bidang IT, bisnis, dan administrasi untuk mendukung kualitas digitalisasi yang berdampak.</p>
     </div>
   </section>
 
@@ -110,15 +114,15 @@
   <section class="section">
     <div class="container about-story">
       <div class="reveal">
-        <span class="section-tag">Our Story</span>
-        <h2 class="section-title">Why Collaboration with <span>Revo Creative</span> is Different?</h2>
-        <p style="color:var(--color-muted);font-size:16.5px;margin-bottom:18px;">
+        <span class="section-tag" data-i18n="aboutPage.storyTag">Our Story</span>
+        <h2 class="section-title" data-i18n="aboutPage.storyTitle" data-i18n-html>Why Collaboration with <span>Revo Creative</span> is Different?</h2>
+        <p style="color:var(--color-muted);font-size:16.5px;margin-bottom:18px;" data-i18n="aboutPage.storyP1">
           Bermula pada tahun 2023, Revo Creative telah membantu badan usaha dan
           pemerintah dalam melakukan digitalisasi usaha mereka. Revo Creative juga
           membangun kemitraan bersama talenta-talenta muda di bidang Informasi dan
           Teknologi untuk mendukung kualitas pelayanan yang diberikan.
         </p>
-        <p style="color:var(--color-muted);font-size:16.5px;">
+        <p style="color:var(--color-muted);font-size:16.5px;" data-i18n="aboutPage.storyP2" data-i18n-html>
           Misi kami adalah <strong style="color:var(--color-navy);">memberikan dampak positif dari segi branding maupun ekonomi melalui digitalisasi</strong>.
           Untuk itu, kami menyediakan layanan dan produk digital yang berkualitas
           namun terjangkau bagi seluruh kalangan.
@@ -135,9 +139,9 @@
   <section class="section" style="background:var(--color-light);">
     <div class="container">
       <div class="text-center reveal">
-        <span class="section-tag">Our Values</span>
-        <h2 class="section-title">Empat Nilai yang Memandu Kami</h2>
-        <p class="section-subtitle center-block">
+        <span class="section-tag" data-i18n="aboutPage.valuesTag">Our Values</span>
+        <h2 class="section-title" data-i18n="aboutPage.valuesTitle">Empat Nilai yang Memandu Kami</h2>
+        <p class="section-subtitle center-block" data-i18n="aboutPage.valuesSubtitle">
           Nilai-nilai inti yang membentuk cara kami bekerja dengan setiap mitra —
           dari briefing pertama hingga peluncuran proyek.
         </p>
@@ -146,23 +150,23 @@
       <div class="value-grid">
         <div class="value-card reveal">
           <div class="value-letter">D</div>
-          <h4>Deliver the Best</h4>
-          <p>Memberikan kualitas terbaik dengan harga yang tetap terjangkau bagi semua kalangan.</p>
+          <h4 data-i18n="aboutPage.valueDTitle">Deliver the Best</h4>
+          <p data-i18n="aboutPage.valueDDesc">Memberikan kualitas terbaik dengan harga yang tetap terjangkau bagi semua kalangan.</p>
         </div>
         <div class="value-card reveal">
           <div class="value-letter">A</div>
-          <h4>Adapt the Tech</h4>
-          <p>Menyesuaikan diri dengan perkembangan teknologi terbaru agar solusi yang dibangun tetap relevan.</p>
+          <h4 data-i18n="aboutPage.valueATitle">Adapt the Tech</h4>
+          <p data-i18n="aboutPage.valueADesc">Menyesuaikan diri dengan perkembangan teknologi terbaru agar solusi yang dibangun tetap relevan.</p>
         </div>
         <div class="value-card reveal">
           <div class="value-letter">W</div>
-          <h4>Workhard Playhard</h4>
-          <p>Bekerja serius dengan dedikasi tinggi, namun tetap menjaga kreativitas dan keseimbangan.</p>
+          <h4 data-i18n="aboutPage.valueWTitle">Workhard Playhard</h4>
+          <p data-i18n="aboutPage.valueWDesc">Bekerja serius dengan dedikasi tinggi, namun tetap menjaga kreativitas dan keseimbangan.</p>
         </div>
         <div class="value-card reveal">
           <div class="value-letter">E</div>
-          <h4>Encourage Everyone</h4>
-          <p>Mendukung setiap anggota tim dan klien untuk berkembang bersama dalam ekosistem digital.</p>
+          <h4 data-i18n="aboutPage.valueETitle">Encourage Everyone</h4>
+          <p data-i18n="aboutPage.valueEDesc">Mendukung setiap anggota tim dan klien untuk berkembang bersama dalam ekosistem digital.</p>
         </div>
       </div>
     </div>
@@ -228,9 +232,9 @@
   <section class="section" style="background:var(--color-light);">
     <div class="container">
       <div class="text-center reveal">
-        <span class="section-tag">Why Us</span>
-        <h2 class="section-title">Mengapa Klien Memilih <span>Revo</span></h2>
-        <p class="section-subtitle center-block">
+        <span class="section-tag" data-i18n="aboutPage.whyTag">Why Us</span>
+        <h2 class="section-title" data-i18n="aboutPage.whyTitle" data-i18n-html>Mengapa Klien Memilih <span>Revo</span></h2>
+        <p class="section-subtitle center-block" data-i18n="aboutPage.whySubtitle">
           Tiga alasan utama mengapa mitra-mitra kami terus mempercayakan transformasi digitalnya kepada Revo Creative.
         </p>
       </div>
@@ -238,18 +242,18 @@
       <div class="why-grid">
         <div class="why-card reveal">
           <div class="num">01</div>
-          <h4>Berkualitas tapi Terjangkau</h4>
-          <p>Kami percaya digitalisasi bukan hanya milik korporasi besar — kualitas korporat harus bisa diakses oleh UMKM dan lembaga apapun.</p>
+          <h4 data-i18n="aboutPage.why1Title">Berkualitas tapi Terjangkau</h4>
+          <p data-i18n="aboutPage.why1Desc">Kami percaya digitalisasi bukan hanya milik korporasi besar — kualitas korporat harus bisa diakses oleh UMKM dan lembaga apapun.</p>
         </div>
         <div class="why-card reveal">
           <div class="num">02</div>
-          <h4>Tim Lintas-Disiplin</h4>
-          <p>Engineering, bisnis, marketing, dan administrasi dalam satu tim — sehingga proyek Anda dipikirkan secara menyeluruh, bukan hanya teknis.</p>
+          <h4 data-i18n="aboutPage.why2Title">Tim Lintas-Disiplin</h4>
+          <p data-i18n="aboutPage.why2Desc">Engineering, bisnis, marketing, dan administrasi dalam satu tim — sehingga proyek Anda dipikirkan secara menyeluruh, bukan hanya teknis.</p>
         </div>
         <div class="why-card reveal">
           <div class="num">03</div>
-          <h4>Track Record di Banyak Sektor</h4>
-          <p>Mulai dari kementerian, BUMN, hingga UMKM — kami sudah membuktikan kemampuan untuk beradaptasi di berbagai skala dan industri.</p>
+          <h4 data-i18n="aboutPage.why3Title">Track Record di Banyak Sektor</h4>
+          <p data-i18n="aboutPage.why3Desc">Mulai dari kementerian, BUMN, hingga UMKM — kami sudah membuktikan kemampuan untuk beradaptasi di berbagai skala dan industri.</p>
         </div>
       </div>
     </div>
@@ -260,10 +264,10 @@
     <div class="container">
       <div class="cta-banner reveal">
         <div>
-          <h2>Siap menjadi mitra digital berikutnya?</h2>
-          <p>Diskusikan ide dan kebutuhan Anda dengan tim kami — kami siap mendengar.</p>
+          <h2 data-i18n="aboutPage.ctaTitle">Siap menjadi mitra digital berikutnya?</h2>
+          <p data-i18n="aboutPage.ctaSubtitle">Diskusikan ide dan kebutuhan Anda dengan tim kami — kami siap mendengar.</p>
         </div>
-        <a href="contact.html" class="btn btn-white">Hubungi Tim &rarr;</a>
+        <a href="contact.html" class="btn btn-white" data-i18n="aboutPage.ctaBtn">Hubungi Tim &rarr;</a>
       </div>
     </div>
   </section>
@@ -274,38 +278,38 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/revo-2024-horizontal-white-zoomed-no-background.webp" alt="Revo Creative" />
-          <p>PT Rajawali Cakra Digdaya — agensi digital yang membantu Anda men-digitalisasi bisnis dengan kualitas korporat dan harga yang terjangkau.</p>
+          <p data-i18n="footer.brandDesc">PT Rajawali Cakra Digdaya — agensi digital yang membantu Anda men-digitalisasi bisnis dengan kualitas korporat dan harga yang terjangkau.</p>
         </div>
         <div>
-          <h5>Perusahaan</h5>
+          <h5 data-i18n="footer.companyHeading">Perusahaan</h5>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h5>Layanan</h5>
+          <h5 data-i18n="footer.servicesHeading">Layanan</h5>
           <ul>
-            <li><a href="index.html#services">Website</a></li>
-            <li><a href="index.html#services">Web &amp; Mobile Apps</a></li>
-            <li><a href="index.html#services">Digital Branding</a></li>
-            <li><a href="index.html#services">Digital Marketing</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcWebsite">Website</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcApps">Web &amp; Mobile Apps</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcBranding">Digital Branding</a></li>
+            <li><a href="index.html#services" data-i18n="footer.svcMarketing">Digital Marketing</a></li>
           </ul>
         </div>
         <div>
-          <h5>Kontak</h5>
+          <h5 data-i18n="footer.contactHeading">Kontak</h5>
           <ul>
             <li>+62 856-7990-037</li>
             <li>rajawalicakradigdaya@gmail.com</li>
             <li>revocreative.co.id</li>
-            <li style="margin-top:8px;line-height:1.5;">Jl. Raya Pd. Gede No.14A,<br/>Pinang Ranti, Makasar,<br/>Jakarta Timur 13560</li>
+            <li style="margin-top:8px;line-height:1.5;" data-i18n="footer.address" data-i18n-html>Jl. Raya Pd. Gede No.14A,<br/>Pinang Ranti, Makasar,<br/>Jakarta Timur 13560</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>© <span id="year">2025</span> Revo Creative. All Rights Reserved.</div>
+        <div>© <span id="year">2025</span> Revo Creative. <span data-i18n="footer.rights">All Rights Reserved.</span></div>
         <div class="socials">
           <a class="social-ico" href="https://www.instagram.com/revocreative_id/" target="_blank" rel="noopener" aria-label="Instagram Revo Creative"><img src="assets/icon/Instagram-logo.svg" alt="Instagram" /></a>
           <a class="social-ico" href="https://www.linkedin.com/company/101702844" target="_blank" rel="noopener" aria-label="LinkedIn Revo Creative"><img src="assets/icon/linkedin-logo.png" alt="LinkedIn" /></a>
@@ -315,7 +319,7 @@
     </div>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="Kembali ke atas">
+  <button class="back-to-top" type="button" aria-label="Kembali ke atas" data-i18n-attr="aria-label:backToTop.label">
     <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 14 12 8 18 14" /></svg>
   </button>
 
